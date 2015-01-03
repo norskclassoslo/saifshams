@@ -3,3 +3,6 @@
 
 sudo cp -rf ./* /var/www/
 sudo chown -R wordpress:www-data /var/www
+git checkout file-system
+sudo cp -rf ./* /
+git checkout master
