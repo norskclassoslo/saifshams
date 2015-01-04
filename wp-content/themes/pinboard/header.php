@@ -31,5 +31,4 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'primary_nav' ) ); ?>
 				<div class="clear"></div>
 			</nav><!-- #access -->
-                  <?php include_once("analyticstracking.php") ?>
 		</header><!-- #header -->
