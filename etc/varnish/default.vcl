@@ -3,6 +3,7 @@
  *
  * The order of the VCL file inclusion is significant.
  */
+vcl 4.0;
 include "host-specific.vcl";
 include "backends.vcl";
 include "access-control.vcl";

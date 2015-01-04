@@ -8,5 +8,5 @@ sub vcl_deliver {
   else if (resp.status == 200) {
     set resp.http.X-Cache = "MISS";
   }
-  set resp.http.X-Cache-Backend = req.backend;
+  set resp.http.X-Cache-Backend = req.backend_hint;
 }

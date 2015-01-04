@@ -9,13 +9,10 @@ sub vcl_recv {
     set req.http.Cookie = regsuball(req.http.Cookie, "^[; ]+|[; ]+$", "");
 
     if (req.http.Cookie == "") {
-      remove req.http.Cookie;
+      unset req.http.Cookie;
     }
   }
 }
 
-sub vcl_fetch {
-  if (beresp.status == 200) {
-    remove beresp.http.Set-Cookie;
-  }
+sub vcl_backend_fetch {
 }
